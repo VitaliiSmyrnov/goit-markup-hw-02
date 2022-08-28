@@ -1,16 +1,14 @@
 :root {
         --main-text-color: #212121;
         --light-text-color: #757575;
+        --accent-blue-color: #2196F3;
         --white-color: #ffffff;
         --black-color: #000000;
-        --accent-blue-color: #2196F3;
         --transp-color: rgba(255, 255, 255, 0.6);
         --item-line-color: #EEEEEE;
-        --main-bg-color: #F5F5F5;
         --accent-bg-color: #F5F4FA;
         --footer-bg-color: #2F303A;
         
-        --font-w-400: 400;
         --font-w-500: 500;
         --font-w-700: 700;
         --font-w-900: 900;
@@ -40,27 +38,39 @@ body {
     text-decoration: none;
 }
 
-/* Main page */
+/* Page Index.html*/
 /* header  */
+/* logo  */
 
 .logo {
     font-family: 'Raleway', sans-serif;
+    font-weight: var(--font-w-700);
     font-size: var(--font-sz-26);
     line-height: 1.19;
-    font-weight: var(--font-w-700);
     color: var(--accent-blue-color);
     letter-spacing: var(--let-sp03);
 }
 
-.logo .head-logo { 
+.head-logo { 
     color: var(--black-color);
 }
 
+.foot-logo {
+    color: var(--white-color);
+}
+
+/* nav  */
+
 .site-nav .link {
+    font-weight: var(--font-w-500);
     font-size: var(--font-sz-14);
     line-height: 1.14;
-    font-weight: var(--font-w-500);
     letter-spacing: var(--let-sp02);
+    color: var(--main-text-color);
+}
+
+.site-nav .current {
+    color: var(--accent-blue-color);
 }
 
 .site-nav .link:hover,
@@ -68,16 +78,18 @@ body {
     color: var(--accent-blue-color);
 }
 
+/* email + tel  */
+
 .contacts .link {
-    color: var(--light-text-color);
+    font-weight: var(--font-w-500);
     font-size: var(--font-sz-14);
     line-height: 1.14;
-    font-weight: var(--font-w-500);
     letter-spacing: var(--let-sp02);
+    color: var(--light-text-color);
 }
 
-.auth .link:hover,
-.auth .link:focus {
+.contacts .link:hover,
+.contacts .link:focus { 
     color: var(--accent-blue-color);
 }
 
@@ -85,27 +97,29 @@ body {
 /* hero */
 
 .hero {
-    background-color: var(--footer-bg-color);
     color: var(--white-color);
+    background-color: var(--footer-bg-color);
 }
 
 .hero-title {
-    font-size: var(--font-sz-44);
     font-weight: var(--font-w-900);
+    font-size: var(--font-sz-44);
     line-height: 1.36;
-    text-align: center;
     letter-spacing: var(--let-sp06);
+    text-align: center;
     text-transform: uppercase;
 }
 
 .hero .hero-btn {
+    font-family: inherit;
     font-weight: var(--font-w-700);
     font-size: var(--font-sz-16);
     line-height: 1.88;
-    text-align: center;
     letter-spacing: var(--let-sp06);
-    background-color: var(--accent-blue-color);
     color: var(--white-color);
+    background-color: var(--accent-blue-color);
+    border-color: transparent;
+    cursor: pointer;
 }
 
 /* section  */
@@ -113,8 +127,8 @@ body {
 .section-title {
     font-size: var(--font-sz-36);
     line-height: 1.17;
-    text-align: center;
     letter-spacing: var(--let-sp03);
+    text-align: center;
 }
 
 /* section features */
@@ -150,15 +164,23 @@ body {
 
 /* section team  */
 
-.team-list .title {
+.section.team {
+    background-color: var(--accent-bg-color);
+}
+
+.team-item {
+    background-color: var(--white-color);
+}
+
+.team-item .title {
+    font-weight: var(--font-w-500);
     font-size: var(--font-sz-16);
     line-height: 1.19;
-    font-weight: var(--font-w-500);
     letter-spacing: var(--let-sp03);
     text-align: center;
 }
 
-.team-list .text {
+.team-item .text {
     font-size: var(--font-sz-16);
     line-height: 1.19;
     letter-spacing: var(--let-sp03);
@@ -172,12 +194,58 @@ body {
     background-color: var(--footer-bg-color);
 }
 
-.logo .foot-logo {
+.contacts-list {
+    font-style: normal;
+    font-size: var(--font-sz-14);
+    line-height: 1.71;
+    letter-spacing: var(--let-sp03);
+}
+
+.contacts-list .link:hover,
+.contacts-list .link:focus {
+    color: var(--accent-blue-color);
+}
+
+.address {
     color: var(--white-color);
 }
 
-address {
-    font-style: normal;
+.contacts-list .mail,
+.contacts-list .tel {
+    color: var(--transp-color);
+}
+
+/* Page Portfolio.html */
+
+.galery-filter .btn {
+    font-family: inherit;
+    font-weight: var(--font-w-500);
+    font-size: var(--font-sz-16);
+    line-height: 1.62;
+    letter-spacing: var(--let-sp03);
+    background-color: var(--accent-bg-color);
+    border-color: transparent;
+    cursor: pointer;
+}
+
+.galery-filter .btn:hover,
+.galery-filter .btn:focus { 
+    color: var(--white-color);
+    background-color: var(--accent-blue-color);
+}
+
+.galery-items .title {
+    font-size: var(--font-sz-18);
+    line-height: 2;
+    letter-spacing: var(--let-sp06);
+    color: var(--main-text-color);
+}
+
+.galery-items .text {
+    font-size: var(--font-sz-16);
+    line-height: 1.88;
+    letter-spacing: var(--let-sp03);
+    color: var(--light-text-color);
 }
 
 
