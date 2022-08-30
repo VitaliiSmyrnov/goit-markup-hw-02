@@ -218,6 +218,11 @@ body {
     cursor: pointer;
 }
 
+.galery-filter .btn.active {
+    color: var(--white-color);
+    background-color: var(--accent-blue-color);
+}
+
 .galery-filter .btn:hover,
 .galery-filter .btn:focus { 
     color: var(--white-color);
